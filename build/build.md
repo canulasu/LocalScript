@@ -1,0 +1,1 @@
+The following build.sh script will only work for Unix and Linux based systems (macOS included). It also needs all the terminal dependencies in the /dependencies/dependencies.md file to be installed and included in the PATH of the local environment. It will generate a folder called build with all the contents.
