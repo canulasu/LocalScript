@@ -1,5 +1,6 @@
 import { execSync } from "child_process";
 import fs from 'fs';
+import { readFile } from 'fs/promises';
 import fsPromises from "fs/promises";
 
 export default class OS {
@@ -63,5 +64,13 @@ export default class OS {
             }
 
         return os
+    }
+    async read(filename) {
+        try {
+            const data = await readFile(filename, 'utf8');
+            return data;
+        } catch (err) {
+            return "E: Error opening file"
+        }
     }
 }
