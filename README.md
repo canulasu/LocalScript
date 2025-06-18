@@ -1,6 +1,18 @@
 # LocalScript
 
-LocalScript is a language for local non web development applications. LocalScripts comes with more runtime libraries, some transpilation for more optimization, and compiles to native JavaScript to be later executed using Node.js.
+LocalScript is a language for local non web development applications. LocalScripts comes with more runtime libraries, some transpilation for more optimization, and compiles to native JavaScript to be later executed using Node.js. This language aims to make JavaScript more adequate and more powerful for easy and efficient backend programming.
+
+## Operating Systems and Support
+
+Currently, LocalScript works on any operating system which support the following dependencies:
+
+
+* Node.js
+* Python3
+* Pip3 or pipx
+* Pyinstaller
+
+While this is true, our compile guide will now work on non Unix systems such as Microsoft Windows.
 
 ## How to compile
 Since LocalScript is very early in development, is is a little bit messy and requires multiple steps to compile. Firstly, clone the GutHub repository to your local machine. Under the source directory in the github repo, there will be a file called local.py. Open this file in any text editor. Scroll down towards the end of the file. You should see this piece of code:
