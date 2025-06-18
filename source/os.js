@@ -65,10 +65,28 @@ export default class OS {
 
         return os
     }
+    
     async read(filename) {
         try {
             const data = await readFile(filename, 'utf8');
             return data;
+        } catch (err) {
+            return "E: Error opening file"
+        }
+    }
+
+    async write(filename, text) {
+        try {
+            const data = await readFile(filename, 'utf8');
+            
+            fs.writeFile(filename, data + text, err => {
+                if (err) {
+                    return "E: Could not write to file"
+                } else {
+                    return "File written"
+                }
+            });
+    
         } catch (err) {
             return "E: Error opening file"
         }
