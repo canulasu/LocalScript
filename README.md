@@ -41,3 +41,10 @@ This ensures that the development and runtime libraries are in the correct place
 * Pyinstaller
 
 You may check out the /dependencies directory in the repository for more information. After ensuring that all the tools are installed in the system, please run the script. Once the script is finished, you should see a directory within the core of the repository named "results" or "result". Please enter that directory. Place all of the files inside this directory to the /usr/bin directory in your system. You may need to use the mv tool in your console or terminal to achieve this.
+
+# We are online! Check out our webpage.
+
+You can visit our website using the following links:
+
+* https://localscriptlang.carrd.co/
+* https://localscript.ct.ws
