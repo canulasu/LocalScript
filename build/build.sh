@@ -2,6 +2,8 @@
 
 echo "Please run the dependencies script before building this project."
 
+sleep 1
+
 cd ..
 cd source
 pyinstaller --onefile local.py
@@ -19,3 +21,5 @@ cp ../source/os.js .
 cp ../source/time.js .
 cp ../source/output.js .
 cd ..
+
+echo "LocalScript compiled. Results can be found in: /localscript-main/bin"
