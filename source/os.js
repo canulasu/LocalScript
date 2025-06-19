@@ -91,4 +91,11 @@ export default class OS {
             return "E: Error opening file"
         }
     }
+
+    async listdir(directory) {
+    
+        const files = await fsPromises.readdir(directory);
+        return files;
+    
+    }
 }
