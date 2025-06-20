@@ -24,4 +24,9 @@ export default class Output {
     println(text) {
         console.log(text);
     }
+    
+    clear() {
+        console.clear();
+        process.stdout.write('\x1Bc');
+    }
 }
