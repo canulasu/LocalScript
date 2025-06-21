@@ -68,9 +68,11 @@ elif args.version:
     print("LocalScript 0.7")
 
 else:
+    print('Welcome to LocalScript v0.7.')
+    print('Transpiles to Node.js. Variables do not save.')
     while True:
         try:
-            command = input(f'{orange}>>> {orangeclose}')
+            command = input(f'{orange}> {orangeclose}')
 
             with open('localscriptreplmodeinterpretedfile.ls', 'a') as file:
                 file.write(command)
