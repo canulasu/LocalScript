@@ -2,6 +2,9 @@ import argparse
 import sys
 import os
 
+orange = "\033[38;5;208m"
+orangeclose = "\033[0m"
+
 parser = argparse.ArgumentParser(description="Localscript Executer")
 
 parser.add_argument('-r', '--run', type=str, help='Run a LocalScript script')
@@ -9,10 +12,7 @@ parser.add_argument('-v', '--version', action='store_true', help='LocalScript ve
 
 args = parser.parse_args()
 
-if args.run:
-
-    filename = args.run
-
+def interpret(filename):
     try:
         open(filename, 'r')
     except:
@@ -60,5 +60,21 @@ if args.run:
     os.system('node localscript.js')
     os.remove('localscript.js')
 
-if args.version:
+if args.run:
+
+    interpret(args.run)
+
+elif args.version:
     print("LocalScript 0.7")
+
+else:
+    while True:
+        try:
+            command = input(f'{orange}>>> {orangeclose}')
+
+            with open('localscriptreplmodeinterpretedfile.ls', 'a') as file:
+                file.write(command)
+            interpret('localscriptreplmodeinterpretedfile.ls')
+            os.remove('localscriptreplmodeinterpretedfile.ls')
+        except KeyboardInterrupt:
+            print('')
